@@ -12,7 +12,7 @@ service BFFService {
 }
 
 message HealthCheckRequest {
-    string testMessage = 1;
+    string test_message = 1;
 }
 
 message HealthCheckResponse {

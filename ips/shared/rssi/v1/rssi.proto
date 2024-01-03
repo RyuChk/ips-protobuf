@@ -6,9 +6,10 @@ package ips.shared.rssi.v1;
 
 message RSSI {
     string ssid = 1;
-    float strength = 2;
-    int32 polling_rate = 3;
-    google.protobuf.Timestamp created_at = 4;
+    string mac_address = 2;
+    float strength = 3;
+    int32 polling_rate = 4;
+    google.protobuf.Timestamp created_at = 5;
 }
 
 message Position {
