@@ -8,6 +8,7 @@ package ips.rssi.v1;
 
 service StatCollectionService {
     rpc CollectData (CollectDataRequest) returns (CollectDataResponse);
+    rpc GetCoordinate (GetCoordinateRequest) returns (GetCoordinateResponse);
 }
 
 message CollectDataRequest {
@@ -22,4 +23,13 @@ message CollectDataRequest {
 }
 
 message CollectDataResponse {
+}
+
+message GetCoordinateRequest{
+    repeated ips.shared.rssi.v1.RSSI signals = 1;
+    ips.shared.rssi.v1.DeviceInfo device_info = 2;
+}
+
+message GetCoordinateResponse {
+    ips.shared.rssi.v1.Position position = 1;
 }
