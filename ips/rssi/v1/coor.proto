@@ -1,12 +1,10 @@
 syntax = "proto3";
 
-import "google/protobuf/timestamp.proto";
 import "ips/shared/rssi/v1/rssi.proto";
-import "ips/shared/rssi/v1/stat.proto";
 
 package ips.rssi.v1;
 
-service StatCollectionService {
+service CoordinateCollectionService {
     rpc GetCoordinate (GetCoordinateRequest) returns (GetCoordinateResponse);
 }
 

@@ -1,6 +1,5 @@
 syntax = "proto3";
 
-import "google/protobuf/timestamp.proto";
 import "ips/shared/bff/v1/bff.proto";
 
 package ips.bff.v1;
