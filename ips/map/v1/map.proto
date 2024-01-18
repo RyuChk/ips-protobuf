@@ -7,16 +7,31 @@ package ips.map.v1;
 
 service MapService {
     //Get
+    rpc GetFloorList(GetFloorListRequest) returns (GetFloorListResponse);
     rpc GetMapURL(GetMapURLRequest) returns (GetMapURLResponse);
 }
 
+message FloorDetail {
+    string name = 1;
+    string description = 2;
+    int32 number = 3;
+    string building = 4;
+}
+
+message GetFloorListRequest {
+    string building = 1;
+}
+
+message GetFloorListResponse {
+    repeated FloorDetail floors = 1;
+}
+
 message GetMapURLRequest {
-    int32 floor = 1; 
+    int32 floor_number = 1; 
 }
 
 message GetMapURLResponse {
-    string map_name = 1;
-    int32 floor = 2;
-    string image_url = 3;
-    google.protobuf.Timestamp updated_at = 5;
+    FloorDetail Detail = 1;
+    string url = 2;
+    google.protobuf.Timestamp updated_at = 3;
 }
