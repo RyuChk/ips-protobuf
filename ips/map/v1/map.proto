@@ -16,6 +16,7 @@ message FloorDetail {
     string description = 2;
     int32 number = 3;
     string building = 4;
+    string symbol =5;
 }
 
 message GetFloorListRequest {
