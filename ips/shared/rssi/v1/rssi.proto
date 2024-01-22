@@ -19,5 +19,5 @@ message Position {
 
 message DeviceInfo {
     string device_id = 1;
-    string models = 2;
+    string model = 2;
 }
