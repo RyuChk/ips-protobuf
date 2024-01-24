@@ -6,9 +6,24 @@ package ips.map.v1;
 
 
 service MapService {
-    //Get
     rpc GetFloorList(GetFloorListRequest) returns (GetFloorListResponse);
+    rpc AddFloor(AddFloorRequest) returns (AddFloorResponse);
     rpc GetMapURL(GetMapURLRequest) returns (GetMapURLResponse);
+    rpc AddMapURL(AddMapURLRequest) returns (AddMapURLResponse);
+}
+
+message AddFloorRequest {
+    string name = 1;
+    string description = 2;
+    int32 number = 3;
+    string building = 4;
+    string symbol =5;
+}
+
+message AddFloorResponse {
+    FloorDetail info = 1;
+    google.protobuf.Timestamp created_at = 2;
+    google.protobuf.Timestamp updated_at = 3;
 }
 
 message FloorDetail {
@@ -29,10 +44,24 @@ message GetFloorListResponse {
 
 message GetMapURLRequest {
     int32 floor_number = 1; 
+    string building = 2;
 }
 
 message GetMapURLResponse {
     FloorDetail Detail = 1;
     string url = 2;
     google.protobuf.Timestamp updated_at = 3;
+}
+
+message AddMapURLRequest {
+    int32 floor_number = 1;
+    string building = 2;
+    string url = 3;
+}
+
+message AddMapURLResponse{
+    FloorDetail Detail = 1;
+    string url = 2;
+    google.protobuf.Timestamp updated_at = 3;
+    google.protobuf.Timestamp created_at = 4;
 }
