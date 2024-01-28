@@ -21,6 +21,7 @@ message GetCoordinateResponse {
 message RegisterApRequest{
     string ssid = 1;
     string mac_address = 2;
+    string name = 3;
 }
 
 message RegisterApResponse{
