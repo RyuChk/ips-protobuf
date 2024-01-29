@@ -5,7 +5,6 @@ import "ips/shared/user/v1/user.proto";
 
 package ips.map.v1;
 
-
 service MapService {
     rpc GetFloorList(GetFloorListRequest) returns (GetFloorListResponse);
     rpc AddFloor(AddFloorRequest) returns (AddFloorResponse);
@@ -13,12 +12,22 @@ service MapService {
     rpc AddMapURL(AddMapURLRequest) returns (AddMapURLResponse);
 }
 
+message FloorDetail {
+    string name = 1;
+    string description = 2;
+    int32 number = 3;
+    string building = 4;
+    string symbol = 5;
+    bool is_admin = 6;
+}
+
 message AddFloorRequest {
     string name = 1;
     string description = 2;
     int32 number = 3;
     string building = 4;
-    string symbol =5;
+    string symbol = 5;
+    bool is_admin = 6;
 }
 
 message AddFloorResponse {
@@ -27,20 +36,13 @@ message AddFloorResponse {
     google.protobuf.Timestamp updated_at = 3;
 }
 
-message FloorDetail {
-    string name = 1;
-    string description = 2;
-    int32 number = 3;
-    string building = 4;
-    string symbol =5;
-}
-
 message GetFloorListRequest {
     string building = 1;
     ips.shared.user.v1.Role role = 2;
 }
 
 message GetFloorListResponse {
+    bool is_admin = 2;
     repeated FloorDetail floors = 1;
 }
 
