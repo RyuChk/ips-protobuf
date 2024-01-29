@@ -31,11 +31,11 @@ message GetStatDataRequest {
 }
 
 message GetStatDataResponse {
-    repeated float rssi = 1;
+    repeated double rssi = 1;
     float x = 2;
     float y = 3;
     float z = 4;
-    float polling_rate = 5;
+    int32 polling_rate = 5;
     string model = 6;
     ips.shared.rssi.v1.StatCollectionStage stage = 7;
 }
