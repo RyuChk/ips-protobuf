@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 import "google/protobuf/timestamp.proto";
+import "ips/shared/user/v1/user.proto";
 
 package ips.map.v1;
 
@@ -36,6 +37,7 @@ message FloorDetail {
 
 message GetFloorListRequest {
     string building = 1;
+    ips.shared.user.v1.Role role = 2;
 }
 
 message GetFloorListResponse {
@@ -45,6 +47,7 @@ message GetFloorListResponse {
 message GetMapURLRequest {
     int32 floor_number = 1; 
     string building = 2;
+    ips.shared.user.v1.Role role = 3;
 }
 
 message GetMapURLResponse {
