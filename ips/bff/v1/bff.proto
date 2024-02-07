@@ -1,6 +1,5 @@
 syntax = "proto3";
 
-import "ips/shared/bff/v1/bff.proto";
 
 package ips.bff.v1;
 
@@ -16,5 +15,4 @@ message HealthCheckRequest {
 
 message HealthCheckResponse {
     string response = 1;
-    ips.shared.bff.v1.HealthStatus status = 2;
 }

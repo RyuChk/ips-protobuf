@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "ips/shared/rssi/v1/rssi.proto";
+
+package ips.shared.map.v1;
+
+message OnlineUser {
+    string display_name = 1;
+    ips.shared.rssi.v1.Position coordinate = 2;
+    google.protobuf.Timestamp timestamp = 3;
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package ips.map.v1;
+
+service PresenceService {
+    rpc FetchOnlineUser(FetchOnlineUserRequest) returns (FetchOnlineUserResponse);
+}
+
+message FetchOnlineUserRequest {
+
+}
+
+message FetchOnlineUserResponse {
+}

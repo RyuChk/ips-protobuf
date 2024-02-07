@@ -53,7 +53,7 @@ message GetMapURLRequest {
 }
 
 message GetMapURLResponse {
-    FloorDetail Detail = 1;
+    FloorDetail detail = 1;
     string url = 2;
     google.protobuf.Timestamp updated_at = 3;
 }
@@ -65,7 +65,7 @@ message AddMapURLRequest {
 }
 
 message AddMapURLResponse{
-    FloorDetail Detail = 1;
+    FloorDetail detail = 1;
     string url = 2;
     google.protobuf.Timestamp updated_at = 3;
     google.protobuf.Timestamp created_at = 4;
