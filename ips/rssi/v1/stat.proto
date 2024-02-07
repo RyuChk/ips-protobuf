@@ -9,6 +9,7 @@ package ips.rssi.v1;
 service StatCollectionService {
     rpc CollectData (CollectDataRequest) returns (CollectDataResponse);
     rpc GetStatData (GetStatDataRequest) returns (GetStatDataResponse);
+    rpc ReDoDataProcessing (ReDoDataProcessingRequest) returns (ReDoDataProcessingResponse);
 }
 
 message CollectDataRequest {
@@ -38,4 +39,14 @@ message GetStatDataResponse {
     int32 polling_rate = 5;
     string model = 6;
     ips.shared.rssi.v1.StatCollectionStage stage = 7;
+}
+
+message ReDoDataProcessingRequest {
+    google.protobuf.Timestamp start_at = 1;
+    google.protobuf.Timestamp end_at = 2;
+}
+
+message ReDoDataProcessingResponse {
+    int32 total_data_processed = 1;
+    int32 total_row_added = 2;
 }
