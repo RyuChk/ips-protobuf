@@ -1,9 +1,6 @@
 syntax = "proto3";
 
-import "google/protobuf/timestamp.proto";
-import "ips/shared/user/v1/user.proto";
-
-package ips.map.v1;
+package ips.model.v1;
 
 
 service ModelService {
