@@ -1,5 +1,8 @@
 syntax = "proto3";
 
+import "ips/shared/map/v1/presence.proto";
+import "google/protobuf/timestamp.proto";
+
 package ips.map.v1;
 
 service PresenceService {
@@ -7,8 +10,9 @@ service PresenceService {
 }
 
 message FetchOnlineUserRequest {
-
 }
 
 message FetchOnlineUserResponse {
+    repeated ips.shared.map.v1.OnlineUser online_users = 1;
+    google.protobuf.Timestamp timestamp = 2;
 }
