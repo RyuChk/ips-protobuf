@@ -4,7 +4,7 @@ import "ips/shared/rssi/v1/rssi.proto";
 
 package ips.rssi.v1;
 
-service CoordinateCollectionService {
+service UserManagerService {
     rpc GetCoordinate (GetCoordinateRequest) returns (GetCoordinateResponse);
     rpc RegisterAp (RegisterApRequest) returns (RegisterApResponse);
 }
