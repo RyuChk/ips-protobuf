@@ -12,6 +12,8 @@ service UserManagerService {
 message GetCoordinateRequest{
     repeated ips.shared.rssi.v1.RSSI signals = 1;
     ips.shared.rssi.v1.DeviceInfo device_info = 2;
+    string user = 3;
+    bool is_admin = 4;
 }
 
 message GetCoordinateResponse {
