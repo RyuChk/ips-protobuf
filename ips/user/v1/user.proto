@@ -2,7 +2,7 @@ syntax = "proto3";
 
 import "ips/shared/rssi/v1/rssi.proto";
 
-package ips.rssi.v1;
+package ips.user.v1;
 
 service UserManagerService {
     rpc GetCoordinate (GetCoordinateRequest) returns (GetCoordinateResponse);

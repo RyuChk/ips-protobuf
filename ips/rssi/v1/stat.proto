@@ -19,9 +19,10 @@ message CollectDataRequest {
     int32 duration = 4;
     int32 polling_rate = 5;
     ips.shared.rssi.v1.StatCollectionStage stage = 6;
-    google.protobuf.Timestamp started_at = 7;
-    google.protobuf.Timestamp ended_at = 8;
-    google.protobuf.Timestamp created_at = 9;
+    ips.shared.rssi.v1.RecordingDirection direction = 7;
+    google.protobuf.Timestamp started_at = 8;
+    google.protobuf.Timestamp ended_at = 9;
+    google.protobuf.Timestamp created_at = 10;
 }
 
 message CollectDataResponse {
