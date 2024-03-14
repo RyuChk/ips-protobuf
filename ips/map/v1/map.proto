@@ -21,6 +21,8 @@ message FloorDetail {
     string building = 4;
     string symbol = 5;
     bool is_admin = 6;
+    double origin_lat = 7;
+    double origin_long = 8;
 }
 
 message Building {
