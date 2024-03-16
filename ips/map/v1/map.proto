@@ -23,6 +23,7 @@ message FloorDetail {
     bool is_admin = 6;
     double origin_lat = 7;
     double origin_long = 8;
+    string map_url = 9;
 }
 
 message Building {
